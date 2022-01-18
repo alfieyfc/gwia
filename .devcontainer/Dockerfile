@@ -58,7 +58,7 @@ RUN su ${USERNAME} -c "mix local.hex --force \
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends inotify-tools
+    && apt-get -y install --no-install-recommends inotify-tools postgresql-client
 
 # [Optional] Uncomment this line to install additional package.
 # RUN  mix ...
