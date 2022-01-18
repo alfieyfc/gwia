@@ -33,4 +33,18 @@ defmodule Gwia.IdentitiesFixtures do
 
     identity
   end
+
+  @doc """
+  Generate a topic.
+  """
+  def topic_fixture(attrs \\ %{}) do
+    {:ok, topic} =
+      attrs
+      |> Enum.into(%{
+        name: "some name"
+      })
+      |> Gwia.Identities.create_topic()
+
+    topic
+  end
 end

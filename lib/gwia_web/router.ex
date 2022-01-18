@@ -25,6 +25,7 @@ defmodule GwiaWeb.Router do
     pipe_through :api
 
     resources "/identities", IdentityController, except: [:new, :edit]
+    resources "/topics", TopicController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
