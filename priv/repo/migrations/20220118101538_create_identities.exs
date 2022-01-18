@@ -8,5 +8,7 @@ defmodule Gwia.Repo.Migrations.CreateIdentities do
 
       timestamps()
     end
+
+    create unique_index(:identities, :value)
   end
 end
