@@ -20,11 +20,6 @@ defmodule GwiaWeb.PageController do
       |> elem(0)
       |> elem(0)
 
-    # IO.inspect(r_identity_topic)
-
-    # selected_id = r_identity_topic.identity_id
-    # IO.puts(selected_id)
-
     query =
       from i in Identity,
         where: i.id == ^r_identity_topic.identity_id,
